@@ -30,9 +30,12 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(2),
     },
     cardContainer: {
-        width: '45%', // Set width for inline alignment
-        height: '100%', // Set the height of the container to 100% of its parent
-      },
+        width: '45%',
+        height: '100%',
+    },
+    heading: {
+        fontWeight: 'bold',
+    },
 }));
 
 const Men = () => {
@@ -89,13 +92,18 @@ const Men = () => {
     };
 
     return (
-        <div className={classes.container}>
-            {divideMenCards(menCardData, 4).map((row, index) => (
-                <div key={index}>
-                    {renderCardRow(row)}
-                </div>
-            ))}
-        </div>
+        <>
+            <Typography variant="h5" component="h5" className={classes.heading}>
+                Men's clothing
+            </Typography>
+            <div className={classes.container}>
+                {divideMenCards(menCardData, 4).map((row, index) => (
+                    <div key={index}>
+                        {renderCardRow(row)}
+                    </div>
+                ))}
+            </div>
+        </>
     );
 };
 

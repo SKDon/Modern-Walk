@@ -36,19 +36,19 @@ function Home() {
     }, []);
 
     const card1Data = {
-        title: categories[0], 
-        route: `/${categories[0]}`, 
+        title: categories[0],
+        route: `/${categories[0]}`,
         color: "#66ffcc"
     };
 
     const card2Data = {
-        title: categories[1], 
-        route: `/${categories[1]}`, 
+        title: categories[1],
+        route: `/${categories[1]}`,
         color: "#ff4d88"
     };
 
     return (
-        <div>
+        <>
             <div>
                 <h3>
                     Flash Sales
@@ -61,7 +61,7 @@ function Home() {
                 </h3>
                 <Category card1Data={card1Data} card2Data={card2Data} />
             </div>
-        </div>
+        </>
     );
 }
 

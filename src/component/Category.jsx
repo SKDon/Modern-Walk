@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: '20px 20px 20px 20px',
       },
       title: {
-        fontSize: '2.5rem',
+        fontSize: '1.7rem',
         fontWeight: 'bold', 
         textTransform: 'capitalize',
     },

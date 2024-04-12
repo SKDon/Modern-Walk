@@ -29,6 +29,13 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(2),
         flexWrap: 'wrap',
     },
+    cardContainer: {
+        width: '45%',
+        height: '100%',
+    },
+    heading: {
+        fontWeight: 'bold',
+    },
 }));
 
 const Women = () => {
@@ -45,7 +52,7 @@ const Women = () => {
     }, []);
 
     const renderCard = (cardData) => (
-        <Grid item xs={12} sm={6} md={3} key={cardData.id}>
+        <Grid item xs={12} sm={6} md={3} key={cardData.id} className={classes.cardContainer}>
             <Paper className={classes.paper} elevation={9}>
                 <Typography variant="h5" component="h2">
                     {cardData.title}
@@ -85,13 +92,18 @@ const Women = () => {
     };
 
     return (
-        <div className={classes.container}>
-            {divideMenCards(menCardData, 4).map((row, index) => (
-                <div key={index}>
-                    {renderCardRow(row)}
-                </div>
-            ))}
-        </div>
+        <>
+            <Typography variant="h5" component="h5" className={classes.heading}>
+                Women's clothing
+            </Typography>
+            <div className={classes.container}>
+                {divideMenCards(menCardData, 4).map((row, index) => (
+                    <div key={index}>
+                        {renderCardRow(row)}
+                    </div>
+                ))}
+            </div>
+        </>
     );
 };
 
