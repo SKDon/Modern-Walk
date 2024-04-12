@@ -1,23 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Home from './component/Home'
+import Men from './component/Men'
+import Women from './component/Women'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Typography, makeStyles } from '@material-ui/core';
+const useStyles = makeStyles((theme) => ({
+  heading: {
+    textAlign: 'center',
+    fontWeight: 'bold',
+  },
+  content: {
+    padding: theme.spacing(2), 
+  },
+}));
 function App() {
+  const classes = useStyles();
+  var men = "men's clothing";
+  var women = "women's clothing";
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.content}>
+      <Typography variant="h3" component="h3" className={classes.heading}>
+        Modern Walk
+      </Typography>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path={`${men}`} element={<Men />} />
+          <Route path={`${women}`} element={<Women />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
