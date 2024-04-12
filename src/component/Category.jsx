@@ -33,6 +33,11 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center', 
         borderRadius: '20px 20px 20px 20px',
       },
+      title: {
+        fontSize: '3rem',
+        fontWeight: 'bold', 
+        textTransform: 'capitalize',
+    },
 }));
 
 const Category = ({ card1Data, card2Data }) => {
@@ -41,14 +46,14 @@ const Category = ({ card1Data, card2Data }) => {
         <div className={classes.container}>
             <Link to={card1Data.route} className={classes.card}>
                 <Paper elevation={9} className={`${classes.paper} ${classes.whiteText} ${classes.men}`}>
-                    <Typography variant="h5" component="h2">
+                    <Typography variant="h5" component="h2" className={classes.title}>
                         {card1Data.title}
                     </Typography>
                 </Paper>
             </Link>
             <Link to={card2Data.route} className={classes.card}>
                 <Paper elevation={5} className={`${classes.paper} ${classes.whiteText} ${classes.women}`}>
-                    <Typography variant="h5" component="h2">
+                    <Typography variant="h5" component="h2" className={classes.title}>
                         {card2Data.title}
                     </Typography>
                 </Paper>
