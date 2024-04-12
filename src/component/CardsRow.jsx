@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     price: {
         color: 'blue',
         fontWeight: 'bold',
-        fontSize: '1.2rem', 
+        fontSize: '1.2rem',
     },
     content: {
         backgroundColor: 'green',
@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
         margin: 'auto',
         display: 'block',
         width: '100%',
-        height: 'auto', 
+        height: 'auto',
     },
     container: {
         display: 'flex',
@@ -28,9 +28,9 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(2),
     },
     cardContainer: {
-        width: '45%', 
-        marginBottom: theme.spacing(2), 
-      },
+        width: '45%',
+        marginBottom: theme.spacing(2),
+    },
 }));
 
 const CardsRow = ({ menCardData, womenCardData }) => {
@@ -54,7 +54,7 @@ const CardsRow = ({ menCardData, womenCardData }) => {
                             />
                             <CardContent className={classes.content} style={{ backgroundColor: '#66ffcc' }}>
                                 <Typography variant="body2" className={classes.price}>
-                                    {menCardData[i].price}
+                                    Rs.{menCardData[i].price}
                                 </Typography>
                                 <Typography variant="body2">
                                     {menCardData[i].description}
@@ -79,7 +79,7 @@ const CardsRow = ({ menCardData, womenCardData }) => {
                             />
                             <CardContent className={classes.content} style={{ backgroundColor: '#ff4d88' }}>
                                 <Typography variant="body2" className={classes.price}>
-                                    {womenCardData[i].price}
+                                    Rs.{womenCardData[i].price}
                                 </Typography>
                                 <Typography variant="body2">
                                     {womenCardData[i].description}

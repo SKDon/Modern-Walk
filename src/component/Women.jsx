@@ -58,7 +58,7 @@ const Women = () => {
                 />
                 <CardContent className={classes.content}>
                     <Typography variant="body2" className={classes.price}>
-                        ${cardData.price}
+                        Rs.{cardData.price}
                     </Typography>
                     <Typography variant="body2">
                         {cardData.description}
